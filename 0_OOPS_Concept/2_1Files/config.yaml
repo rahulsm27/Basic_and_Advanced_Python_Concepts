@@ -1,0 +1,8 @@
+name:
+    train:
+      matrix:
+        model: [cnn, xgb]
+        feature: [feature1, feature2, feature3]
+      cmd:  ./train.py --feature ${item.feature} ${item.model}
+      outs:
+        - ${item.model.pkl}
